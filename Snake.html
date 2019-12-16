@@ -1,0 +1,254 @@
+<html>
+     <style>
+    body {
+    background-color: #88aaff
+    }
+    </style>
+    <head>
+        <h1>The Snake Quiz</h1>
+        <p1>Here you can take the snake quiz! I will see if you pass and if you do you win nothing! You need at least 3 correct to pass.</p1>
+        <br>
+        <br>
+
+            <button id="Homepage" class="float-left submit-button" >Home Page</button>
+
+<script type="text/javascript">
+    document.getElementById("Homepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Genious%20Hour%20Project.html";
+    };
+</script>
+
+<button id="Catpage" class="float-left submit-button" >Cat Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Catpage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Cat%20page.html";
+    };
+   </script>
+    <button id="Snakepage" class="float-left submit-button" >Snake Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Snakepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Snake.html";
+    };
+</script>
+        <button id="Ratpage" class="float-left submit-button" >Naked Mole Rat Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Ratpage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Rat.html";
+    };
+</script>
+        <button id="Zebrapage" class="float-left submit-button" >Zebra Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Zebrapage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Zebra.html";
+    };
+</script>
+        <button id="Hedgepage" class="float-left submit-button" >Hedgdehog Quiz</button>
+<script type="text/javascript">
+    document.getElementById("Hedgepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Hedghog.html";
+    };
+</script>
+        <br><br>
+<img src="https://whitepython.com/wp-content/uploads/2012/06/Royal-Python4-290x244.jpg" />
+    <br><br><br>
+        <script type="text/javascript">
+    var score = 0;
+    var questions = 5;
+
+    function start() {
+        if (questions == 5) {
+            document.getElementById("question").innerHTML = "Where do you let your snake go to the bathroom?";
+            document.getElementById("option1").innerHTML = "In its cage.";
+            document.getElementById("option2").innerHTML = "Your yard";
+            document.getElementById("option3").innerHTML = "Your neighbor's yard.";
+            document.getElementById("option4").innerHTML = "How does a snake use the restroom?";
+        }
+
+        else if (questions == 4) {
+            document.getElementById("question").innerHTML = "Where will you get your snake?";
+            document.getElementById("option1").innerHTML = "The amazon";
+            document.getElementById("option2").innerHTML = "The pet store";
+            document.getElementById("option3").innerHTML = "Steal it from the zoo.";
+            document.getElementById("option4").innerHTML = "A licensed snake charmer.";
+        }
+
+        else if (questions == 3) {
+            document.getElementById("question").innerHTML = "What will you do if your snake bites you?";
+            document.getElementById("option1").innerHTML = "Go to the doctor.";
+            document.getElementById("option2").innerHTML = "Nothing, it's just playing.";
+            document.getElementById("option3").innerHTML = "Stop, drop, and roll";
+            document.getElementById("option4").innerHTML = "Bite it back.";
+        }
+
+        else if (questions == 2) {
+            document.getElementById("question").innerHTML = "What will you feed your snake?";
+            document.getElementById("option1").innerHTML = "Give it your lunch.";
+            document.getElementById("option2").innerHTML = "Let it loose in Wal-mart.";
+            document.getElementById("option3").innerHTML = "Leftovers";
+            document.getElementById("option4").innerHTML = "Hawaiian pizza";
+        }
+
+        else if (questions == 1) {
+            document.getElementById("question").innerHTML = "How do you wash your snake?";
+            document.getElementById("option1").innerHTML = "Spray it with the hose.";
+            document.getElementById("option2").innerHTML = "With water(duh...)";
+            document.getElementById("option3").innerHTML = "Snakes are very clean reptiles.";
+            document.getElementById("option4").innerHTML = "Lick it";
+        }
+
+
+        else if (questions == 0) {
+            document.getElementById("question").innerHTML = "";
+            document.getElementById("option1").innerHTML = "";
+            document.getElementById("option2").innerHTML = "";
+            document.getElementById("option3").innerHTML = "";
+            document.getElementById("option4").innerHTML = "";
+            document.getElementById("score").innerHTML = "Your score was: " + score;
+        }
+
+    }
+
+    function answer(question) {
+        if (questions == 5) {
+            if (question == 1) {
+                score++; 
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                        else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 4) {
+            if (question == 1) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 3) {
+            if (question == 1) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 2) {
+            if (question == 1) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 1) {
+            if (question == 1) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+    }
+
+</script>
+</head>
+ <body onload="javascript:start()">
+ <div>
+<span id="question">
+    </span><br />
+    <button onclick="javascript:answer(1)" id="option1">Random Answer 1</button><br />
+    <button onclick="javascript:answer(2)" id="option2">Random Answer 2</button><br />
+    <button onclick="javascript:answer(3)" id="option3">Random Answer 3</button><br />
+    <button onclick="javascript:answer(4)" id="option4">Random Answer 4</button><br />
+<font face="Tahoma" color="white"><span id="score"></span></font>
+</div>
+</body>

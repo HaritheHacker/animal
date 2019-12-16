@@ -1,0 +1,254 @@
+<html>
+       <style>
+    body {
+	background-color: gray
+} 
+    </style>
+    <head>
+        <h1>The Zebra Quiz</h1>
+        <p1>Here you can take the zebra quiz! I will see if you pass and if you do you win nothing!</p1>
+        <br>
+        <br>
+
+            <button id="Homepage" class="float-left submit-button" >Home Page</button>
+
+<script type="text/javascript">
+    document.getElementById("Homepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Genious%20Hour%20Project.html";
+    };
+</script>
+
+<button id="Catpage" class="float-left submit-button" >Cat Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Catpage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Cat%20page.html";
+    };
+   </script>
+    <button id="Snakepage" class="float-left submit-button" >Snake Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Snakepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Snake.html";
+    };
+</script>
+        <button id="Ratpage" class="float-left submit-button" >Naked Mole Rat Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Ratpage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Rat.html";
+    };
+</script>
+        <button id="Zebrapage" class="float-left submit-button" >Zebra Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Zebrapage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Zebra.html";
+    };
+</script>
+        <button id="Hedgepage" class="float-left submit-button" >Hedgdehog Quiz</button>
+<script type="text/javascript">
+    document.getElementById("Hedgepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Hedghog.html";
+    };
+</script>
+        <br><br>
+        <img src="https://previews.123rf.com/images/zaschnaus/zaschnaus1508/zaschnaus150800056/44204639-funny-zebra-with-sunglasses.jpg" style="height:244px"/>
+    <br><br><br>
+        <script type="text/javascript">
+    var score = 0;
+    var questions = 5;
+
+    function start() {
+        if (questions == 5) {
+            document.getElementById("question").innerHTML = "What will a zebra's fur most likely be used for after it is killed?";
+            document.getElementById("option1").innerHTML = "Barcodes at supermarkets.";
+            document.getElementById("option2").innerHTML = "Food";
+            document.getElementById("option3").innerHTML = "A rug.";
+            document.getElementById("option4").innerHTML = "A way to encourage its friends to try harder.";
+        }
+
+        else if (questions == 4) {
+            document.getElementById("question").innerHTML = "Is a zebra a horse";
+            document.getElementById("option1").innerHTML = "Yes";
+            document.getElementById("option2").innerHTML = "The real question is: Is a seahorse a horse?";
+            document.getElementById("option3").innerHTML = "Zebra's are a reptile.";
+            document.getElementById("option4").innerHTML = "What's a horse?";
+        }
+
+        else if (questions == 3) {
+            document.getElementById("question").innerHTML = "What will you do with your Zebra when it inevitably dies?";
+            document.getElementById("option1").innerHTML = "Burry it at the animal cemetary.";
+            document.getElementById("option2").innerHTML = "Donate it to the lion's pen at the zoo.";
+            document.getElementById("option3").innerHTML = "Eat it.";
+            document.getElementById("option4").innerHTML = "Mount it on a wall and brag to your friends about how you wresteled it to the ground.";
+        }
+
+        else if (questions == 2) {
+            document.getElementById("question").innerHTML = "What will you do if your Zebra is in a fight with a stray dog?";
+            document.getElementById("option1").innerHTML = "Cheer it on";
+            document.getElementById("option2").innerHTML = "Interveen and hopefully not get killed.";
+            document.getElementById("option3").innerHTML = "Sue the dog.";
+            document.getElementById("option4").innerHTML = "Scold your zebra.";
+        }
+
+        else if (questions == 1) {
+            document.getElementById("question").innerHTML = "what will you do if your zebra has a party at your house?(with his fellow zebras)";
+            document.getElementById("option1").innerHTML = "Crash the party.";
+            document.getElementById("option2").innerHTML = "That is not logical.";
+            document.getElementById("option3").innerHTML = "Join the party.";
+            document.getElementById("option4").innerHTML = "I know of penguins who throw parties, but zebras, really come on.";
+        }
+
+
+        else if (questions == 0) {
+            document.getElementById("question").innerHTML = "";
+            document.getElementById("option1").innerHTML = "";
+            document.getElementById("option2").innerHTML = "";
+            document.getElementById("option3").innerHTML = "";
+            document.getElementById("option4").innerHTML = "";
+            document.getElementById("score").innerHTML = "Your score was: " + score;
+        }
+
+    }
+
+    function answer(question) {
+        if (questions == 5) {
+            if (question == 1) {
+                score = score; 
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score++;
+                questions--;
+                start();
+            }
+                        else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 4) {
+            if (question == 1) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 3) {
+            if (question == 1) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score++;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 2) {
+            if (question == 1) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 1) {
+            if (question == 1) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+    }
+
+</script>
+</head>
+ <body onload="javascript:start()">
+ <div>
+<span id="question">
+    </span><br />
+    <button onclick="javascript:answer(1)" id="option1">Random Answer 1</button><br />
+    <button onclick="javascript:answer(2)" id="option2">Random Answer 2</button><br />
+    <button onclick="javascript:answer(3)" id="option3">Random Answer 3</button><br />
+    <button onclick="javascript:answer(4)" id="option4">Random Answer 4</button><br />
+<font face="Tahoma" color="white"><span id="score"></span></font>
+</div>
+</body>

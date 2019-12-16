@@ -1,0 +1,253 @@
+<html>
+     <style>
+    body {
+    background-color: #ffac40
+    }
+    </style>
+    <head>
+        <h1>The Naked Mole Rat Quiz</h1>
+        <p1>Here you can take the Naked Mole Rat quiz! I will see if you pass and if you do you win nothing! You need at least 3 correct to pass.</p1>
+        <br>
+        <br>
+
+            <button id="Homepage" class="float-left submit-button" >Home Page</button>
+
+<script type="text/javascript">
+    document.getElementById("Homepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Genious%20Hour%20Project.html";
+    };
+</script>
+
+<button id="Catpage" class="float-left submit-button" >Cat Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Catpage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Cat%20page.html";
+    };
+   </script>
+    <button id="Snakepage" class="float-left submit-button" >Snake Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Snakepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Snake.html";
+    };
+</script>
+        <button id="Ratpage" class="float-left submit-button" >Naked Mole Rat Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Ratpage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Rat.html";
+    };
+</script>
+        <button id="Hedgepage" class="float-left submit-button" >Hedgdehog Quiz</button>
+<script type="text/javascript">
+    document.getElementById("Hedgepage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Hedghog.html";
+    };
+</script>
+        <button id="Zebrapage" class="float-left submit-button" >Zebra Quiz</button>
+
+<script type="text/javascript">
+    document.getElementById("Zebrapage").onclick = function () {
+        location.href = "file:///home/chronos/u-ebd6b193b84dab0ff9d9b071c31c45decb12adb8/MyFiles/Zebra.html";
+    };
+</script>
+        <br><br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Naked_mole_rat.jpg" style="width:300px;heigt:300px;"/>
+    <br><br><br>
+        <script type="text/javascript">
+    var score = 0;
+    var questions = 5;
+
+    function start() {
+        if (questions == 5) {
+            document.getElementById("question").innerHTML = "Why would you ever consider buying one of these rodents?";
+            document.getElementById("option1").innerHTML = "To perform scientific tests.";
+            document.getElementById("option2").innerHTML = "I am a strange animal collector";
+            document.getElementById("option3").innerHTML = "cuz";
+            document.getElementById("option4").innerHTML = "I'm lonely.";
+        }
+
+        else if (questions == 4) {
+            document.getElementById("question").innerHTML = "Are you afraid of this animal?(hint- to get the best answer, you do not want to be afraid.)";
+            document.getElementById("option1").innerHTML = "Yes";
+            document.getElementById("option2").innerHTML = "No, definitely not, nope, I would never be afraid of a little ol' mole rat, not me.";
+            document.getElementById("option3").innerHTML = "My middle name is AFRAID";
+            document.getElementById("option4").innerHTML = "Sadly, *sigh* yes";
+        }
+
+        else if (questions == 3) {
+            document.getElementById("question").innerHTML = "How will you buy this?";
+            document.getElementById("option1").innerHTML = "I won't. I'm a naked mole rat MAGNET!";
+            document.getElementById("option2").innerHTML = "Illegally smuggling it into your house.";
+            document.getElementById("option3").innerHTML = "Using money.";
+            document.getElementById("option4").innerHTML = "I will lure it with tuna.";
+        }
+
+        else if (questions == 2) {
+            document.getElementById("question").innerHTML = "When are you expecting your beloved rat to die?";
+            document.getElementById("option1").innerHTML = "2-3 years.";
+            document.getElementById("option2").innerHTML = "30-35 years";
+            document.getElementById("option3").innerHTML = "Soon";
+            document.getElementById("option4").innerHTML = "I don't know you tell me.";
+        }
+
+        else if (questions == 1) {
+            document.getElementById("question").innerHTML = "what will you do if your rat gets lose?";
+            document.getElementById("option1").innerHTML = "Catch it";
+            document.getElementById("option2").innerHTML = "Use your 3 year waranty to get a new one.";
+            document.getElementById("option3").innerHTML = "Say 'oh well' and move on with life.";
+            document.getElementById("option4").innerHTML = "Get mad";
+        }
+
+
+        else if (questions == 0) {
+            document.getElementById("question").innerHTML = "";
+            document.getElementById("option1").innerHTML = "";
+            document.getElementById("option2").innerHTML = "";
+            document.getElementById("option3").innerHTML = "";
+            document.getElementById("option4").innerHTML = "";
+            document.getElementById("score").innerHTML = "Your score was: " + score;
+        }
+
+    }
+
+    function answer(question) {
+        if (questions == 5) {
+            if (question == 1) {
+                score = score; 
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                        else if (question == 4) {
+                score++;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 4) {
+            if (question == 1) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+            else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 3) {
+            if (question == 1) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score++;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 2) {
+            if (question == 1) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+
+        else if (questions == 1) {
+            if (question == 1) {
+                score++;
+                questions--;
+                start();
+            }
+
+            else if (question == 2) {
+                score = score;
+                questions--;
+                start();
+            }
+
+            else if (question == 3) {
+                score = score;
+                questions--;
+                start();
+            }
+                                    else if (question == 4) {
+                score = score;
+                questions--;
+                start();
+            }
+        }
+    }
+</script>
+</head>
+ <body onload="javascript:start()">
+ <div>
+<span id="question">
+    </span><br />
+    <button onclick="javascript:answer(1)" id="option1">Random Answer 1</button><br />
+    <button onclick="javascript:answer(2)" id="option2">Random Answer 2</button><br />
+    <button onclick="javascript:answer(3)" id="option3">Random Answer 3</button><br />
+    <button onclick="javascript:answer(4)" id="option4">Random Answer 4</button><br />
+<font face="Tahoma" color="white"><span id="score"></span></font>
+</div>
+</body>
